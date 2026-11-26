@@ -4,8 +4,14 @@
   "version": "0.1.0",
   "type": "module",
   "description": "DominicanGames — One platform. Multiple worlds. Plataforma de videojuegos hecha en República Dominicana; primer título: Santo Domingo Open World.",
-  "workspaces": ["packages/*", "apps/*", "tools/*"],
-  "engines": { "node": ">=20.19" },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "tools/*"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
   "scripts": {
     "dev": "concurrently -k -n server,web -c blue,green \"npm run dev -w @sd/server\" \"npm run dev -w @sd/web\"",
     "build": "npm run build -w @sd/web && npm run build -w @sd/server",
@@ -27,5 +33,8 @@
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@neon/config": "^1.14.8"
   }
 }

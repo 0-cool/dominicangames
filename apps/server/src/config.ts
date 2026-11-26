@@ -8,6 +8,7 @@ const schema = z.object({
   HOST: z.string().default('127.0.0.1'),
   PORT: z.coerce.number().int().default(4000),
   DATABASE_URL: z.string().min(1),
+  DATABASE_URL_UNPOOLED: z.string().optional(),
   APP_ORIGIN: z.string().url().default('http://localhost:5173'),
   TRUST_PROXY: bool.default(false),
   COOKIE_SECURE: bool.optional(),

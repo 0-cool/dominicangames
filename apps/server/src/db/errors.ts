@@ -90,7 +90,7 @@ export function explainDbError(err: unknown, url = process.env.DATABASE_URL): st
 
 /** DATABASE_URL from the environment (.env), or a clear message telling how to create it. */
 export function requireDatabaseUrl(): string {
-  const url = process.env.DATABASE_URL;
+  const url = process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL;
   if (!url) throw new CliError('Falta DATABASE_URL. Crea el archivo .env a partir de .env.example (PowerShell: Copy-Item .env.example .env).');
   return url;
 }
