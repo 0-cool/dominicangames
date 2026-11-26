@@ -1,0 +1,19 @@
+# Local PostgreSQL for development and tests:  docker compose up -d
+# It listens on 127.0.0.1:55432 (not the usual 5432) so it never collides with another PostgreSQL on the same
+# computer (a Windows/macOS install or another project's container). DATABASE_URL in .env uses the same port.
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sd
+      POSTGRES_PASSWORD: sd_dev_password
+      POSTGRES_DB: sd_open_world
+    ports:
+      - '127.0.0.1:55432:5432'
+    volumes:
+      - dominicangames_pg:/var/lib/postgresql/data
+      - ./tools/db/init-test-db.sql:/docker-entrypoint-initdb.d/10-test-db.sql:ro
+volumes:
+  # Fresh data volume for DominicanGames. The previous one ("sd_pg") is not deleted: `docker volume ls` shows it.
+  dominicangames_pg:

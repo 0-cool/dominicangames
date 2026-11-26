@@ -1,0 +1,24 @@
+{
+  "name": "@sd/game",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./capabilities": "./src/engine/capabilities.ts",
+    "./radio": "./src/audio/Radio.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.21.0",
+    "@sd/shared": "0.1.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0"
+  },
+  "sideEffects": false
+}

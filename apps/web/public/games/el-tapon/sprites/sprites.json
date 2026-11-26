@@ -1,0 +1,1250 @@
+{
+ "scale": "75 px = 1 m (near lane, scale 1)",
+ "ground": "y = height (bottom edge)",
+ "sprites": {
+  "moto-jugador": {
+   "name": "Motor del motoconchista",
+   "width": 176,
+   "height": 142,
+   "widthM": 2.35,
+   "heightM": 1.89,
+   "ground": 142,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-spoke-23",
+     "x": 36,
+     "y": 119,
+     "r": 23
+    },
+    {
+     "sprite": "wheel-spoke-23",
+     "x": 142,
+     "y": 119,
+     "r": 23
+    }
+   ],
+   "anchors": {
+    "rider": {
+     "x": 70,
+     "y": 68
+    },
+    "tail": {
+     "x": 8,
+     "y": 80
+    }
+   }
+  },
+  "motoconchista": {
+   "name": "Motoconchista",
+   "width": 176,
+   "height": 160,
+   "widthM": 2.35,
+   "heightM": 2.13,
+   "ground": 160,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "pasajero-senora": {
+   "name": "Pasajero (senora)",
+   "width": 176,
+   "height": 160,
+   "widthM": 2.35,
+   "heightM": 2.13,
+   "ground": 160,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "pasajero-estudiante": {
+   "name": "Pasajero (estudiante)",
+   "width": 176,
+   "height": 160,
+   "widthM": 2.35,
+   "heightM": 2.13,
+   "ground": 160,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "pasajero-don": {
+   "name": "Pasajero (don)",
+   "width": 176,
+   "height": 160,
+   "widthM": 2.35,
+   "heightM": 2.13,
+   "ground": 160,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "carro-publico": {
+   "name": "Carro público (concho)",
+   "width": 332,
+   "height": 112,
+   "widthM": 4.43,
+   "heightM": 1.49,
+   "ground": 112,
+   "hitbox": {
+    "x": 4,
+    "y": 12,
+    "w": 322,
+    "h": 100
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.29
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-rusty-22",
+     "x": 78,
+     "y": 90,
+     "r": 22
+    },
+    {
+     "sprite": "wheel-hubcap-22",
+     "x": 260,
+     "y": 90,
+     "r": 22
+    }
+   ],
+   "anchors": {}
+  },
+  "sonata-mamey": {
+   "name": "Sonata mamey",
+   "width": 368,
+   "height": 132,
+   "widthM": 4.91,
+   "heightM": 1.76,
+   "ground": 132,
+   "hitbox": {
+    "x": 4,
+    "y": 20,
+    "w": 358,
+    "h": 112
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.77
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-24",
+     "x": 88,
+     "y": 108,
+     "r": 24
+    },
+    {
+     "sprite": "wheel-alloy-24",
+     "x": 293,
+     "y": 108,
+     "r": 24
+    }
+   ],
+   "anchors": {}
+  },
+  "omsa": {
+   "name": "Guagua OMSA",
+   "width": 910,
+   "height": 246,
+   "widthM": 12.13,
+   "heightM": 3.28,
+   "ground": 246,
+   "hitbox": {
+    "x": 4,
+    "y": 16,
+    "w": 904,
+    "h": 230
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 12.05
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-bus-37",
+     "x": 262,
+     "y": 209,
+     "r": 37
+    },
+    {
+     "sprite": "wheel-bus-37",
+     "x": 706,
+     "y": 209,
+     "r": 37
+    }
+   ],
+   "anchors": {}
+  },
+  "guagua": {
+   "name": "Guagua de ruta",
+   "width": 552,
+   "height": 234,
+   "widthM": 7.36,
+   "heightM": 3.12,
+   "ground": 234,
+   "hitbox": {
+    "x": 4,
+    "y": 40,
+    "w": 532,
+    "h": 194
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 7.09
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-steel-30",
+     "x": 150,
+     "y": 204,
+     "r": 30
+    },
+    {
+     "sprite": "wheel-steel-30",
+     "x": 440,
+     "y": 204,
+     "r": 30
+    }
+   ],
+   "anchors": {
+    "door": {
+     "x": 466,
+     "y": 150
+    }
+   }
+  },
+  "platanera": {
+   "name": "La Platanera",
+   "width": 296,
+   "height": 228,
+   "widthM": 3.95,
+   "heightM": 3.04,
+   "ground": 228,
+   "hitbox": {
+    "x": 2,
+    "y": 60,
+    "w": 288,
+    "h": 168
+   },
+   "hitboxM": {
+    "x": 0.03,
+    "w": 3.84
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-steel-22",
+     "x": 70,
+     "y": 206,
+     "r": 22
+    },
+    {
+     "sprite": "wheel-steel-22",
+     "x": 236,
+     "y": 206,
+     "r": 22
+    }
+   ],
+   "anchors": {
+    "drop": {
+     "x": 6,
+     "y": 172
+    }
+   }
+  },
+  "platano": {
+   "name": "Plátano en la calle",
+   "width": 62,
+   "height": 26,
+   "widthM": 0.83,
+   "heightM": 0.35,
+   "ground": 26,
+   "hitbox": {
+    "x": 6,
+    "y": 6,
+    "w": 50,
+    "h": 20
+   },
+   "hitboxM": {
+    "x": 0.08,
+    "w": 0.67
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "platano-racimo": {
+   "name": "Mano de plátanos en la calle",
+   "width": 78,
+   "height": 40,
+   "widthM": 1.04,
+   "heightM": 0.53,
+   "ground": 40,
+   "hitbox": {
+    "x": 8,
+    "y": 6,
+    "w": 62,
+    "h": 34
+   },
+   "hitboxM": {
+    "x": 0.11,
+    "w": 0.83
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "policia": {
+   "name": "Patrulla de policía",
+   "width": 410,
+   "height": 200,
+   "widthM": 5.47,
+   "heightM": 2.67,
+   "ground": 200,
+   "hitbox": {
+    "x": 4,
+    "y": 54,
+    "w": 402,
+    "h": 146
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 5.36
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 92,
+     "y": 172,
+     "r": 28
+    },
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 330,
+     "y": 172,
+     "r": 28
+    }
+   ],
+   "anchors": {}
+  },
+  "digesett-pickup": {
+   "name": "Camioneta de tránsito (AMET/DIGESETT)",
+   "width": 410,
+   "height": 200,
+   "widthM": 5.47,
+   "heightM": 2.67,
+   "ground": 200,
+   "hitbox": {
+    "x": 4,
+    "y": 54,
+    "w": 402,
+    "h": 146
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 5.36
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 92,
+     "y": 172,
+     "r": 28
+    },
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 330,
+     "y": 172,
+     "r": 28
+    }
+   ],
+   "anchors": {}
+  },
+  "moto-digesett": {
+   "name": "Motor de tránsito (AMET/DIGESETT)",
+   "width": 176,
+   "height": 142,
+   "widthM": 2.35,
+   "heightM": 1.89,
+   "ground": 142,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-spoke-23",
+     "x": 36,
+     "y": 119,
+     "r": 23
+    },
+    {
+     "sprite": "wheel-spoke-23",
+     "x": 142,
+     "y": 119,
+     "r": 23
+    }
+   ],
+   "anchors": {
+    "rider": {
+     "x": 70,
+     "y": 68
+    },
+    "tail": {
+     "x": 8,
+     "y": 80
+    }
+   }
+  },
+  "agente-motorizado": {
+   "name": "Agente motorizado",
+   "width": 176,
+   "height": 160,
+   "widthM": 2.35,
+   "heightM": 2.13,
+   "ground": 160,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "agente-pare": {
+   "name": "Agente de tránsito (¡Pare!)",
+   "width": 96,
+   "height": 156,
+   "widthM": 1.28,
+   "heightM": 2.08,
+   "ground": 156,
+   "hitbox": {
+    "x": 28,
+    "y": 28,
+    "w": 44,
+    "h": 128
+   },
+   "hitboxM": {
+    "x": 0.37,
+    "w": 0.59
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "agente-siga": {
+   "name": "Agente de tránsito (siga)",
+   "width": 96,
+   "height": 156,
+   "widthM": 1.28,
+   "heightM": 2.08,
+   "ground": 156,
+   "hitbox": {
+    "x": 28,
+    "y": 28,
+    "w": 44,
+    "h": 128
+   },
+   "hitboxM": {
+    "x": 0.37,
+    "w": 0.59
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "cono": {
+   "name": "Cono",
+   "width": 44,
+   "height": 58,
+   "widthM": 0.59,
+   "heightM": 0.77,
+   "ground": 58,
+   "hitbox": {
+    "x": 4,
+    "y": 6,
+    "w": 36,
+    "h": 52
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 0.48
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "desvio": {
+   "name": "Letrero de desvío",
+   "width": 132,
+   "height": 112,
+   "widthM": 1.76,
+   "heightM": 1.49,
+   "ground": 112,
+   "hitbox": {
+    "x": 4,
+    "y": 18,
+    "w": 124,
+    "h": 94
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 1.65
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "hoyo": {
+   "name": "Hoyo en la calle",
+   "width": 120,
+   "height": 30,
+   "widthM": 1.6,
+   "heightM": 0.4,
+   "ground": 30,
+   "hitbox": {
+    "x": 14,
+    "y": 4,
+    "w": 92,
+    "h": 22
+   },
+   "hitboxM": {
+    "x": 0.19,
+    "w": 1.23
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "casco": {
+   "name": "Casco extra",
+   "width": 64,
+   "height": 64,
+   "widthM": 0.85,
+   "heightM": 0.85,
+   "ground": 64,
+   "hitbox": {
+    "x": 10,
+    "y": 10,
+    "w": 44,
+    "h": 44
+   },
+   "hitboxM": {
+    "x": 0.13,
+    "w": 0.59
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "cliente-0": {
+   "name": "Cliente esperando",
+   "width": 72,
+   "height": 150,
+   "widthM": 0.96,
+   "heightM": 2,
+   "ground": 150,
+   "hitbox": {
+    "x": 14,
+    "y": 30,
+    "w": 46,
+    "h": 120
+   },
+   "hitboxM": {
+    "x": 0.19,
+    "w": 0.61
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "cliente-1": {
+   "name": "Cliente esperando",
+   "width": 72,
+   "height": 150,
+   "widthM": 0.96,
+   "heightM": 2,
+   "ground": 150,
+   "hitbox": {
+    "x": 14,
+    "y": 30,
+    "w": 46,
+    "h": 120
+   },
+   "hitboxM": {
+    "x": 0.19,
+    "w": 0.61
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "cliente-2": {
+   "name": "Cliente esperando",
+   "width": 72,
+   "height": 150,
+   "widthM": 0.96,
+   "heightM": 2,
+   "ground": 150,
+   "hitbox": {
+    "x": 14,
+    "y": 30,
+    "w": 46,
+    "h": 120
+   },
+   "hitboxM": {
+    "x": 0.19,
+    "w": 0.61
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "cocos": {
+   "name": "Camioneta de cocos",
+   "width": 410,
+   "height": 200,
+   "widthM": 5.47,
+   "heightM": 2.67,
+   "ground": 200,
+   "hitbox": {
+    "x": 4,
+    "y": 54,
+    "w": 402,
+    "h": 146
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 5.36
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 92,
+     "y": 172,
+     "r": 28
+    },
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 330,
+     "y": 172,
+     "r": 28
+    }
+   ],
+   "anchors": {}
+  },
+  "sedan-plata": {
+   "name": "Carro privado (plata)",
+   "width": 336,
+   "height": 112,
+   "widthM": 4.48,
+   "heightM": 1.49,
+   "ground": 112,
+   "hitbox": {
+    "x": 4,
+    "y": 14,
+    "w": 328,
+    "h": 98
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.37
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-23",
+     "x": 80,
+     "y": 89,
+     "r": 23
+    },
+    {
+     "sprite": "wheel-alloy-23",
+     "x": 262,
+     "y": 89,
+     "r": 23
+    }
+   ],
+   "anchors": {}
+  },
+  "sedan-vino": {
+   "name": "Carro privado (vino)",
+   "width": 336,
+   "height": 112,
+   "widthM": 4.48,
+   "heightM": 1.49,
+   "ground": 112,
+   "hitbox": {
+    "x": 4,
+    "y": 14,
+    "w": 328,
+    "h": 98
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.37
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-23",
+     "x": 80,
+     "y": 89,
+     "r": 23
+    },
+    {
+     "sprite": "wheel-alloy-23",
+     "x": 262,
+     "y": 89,
+     "r": 23
+    }
+   ],
+   "anchors": {}
+  },
+  "sedan-blanco": {
+   "name": "Carro privado (blanco)",
+   "width": 336,
+   "height": 112,
+   "widthM": 4.48,
+   "heightM": 1.49,
+   "ground": 112,
+   "hitbox": {
+    "x": 4,
+    "y": 14,
+    "w": 328,
+    "h": 98
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.37
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-23",
+     "x": 80,
+     "y": 89,
+     "r": 23
+    },
+    {
+     "sprite": "wheel-alloy-23",
+     "x": 262,
+     "y": 89,
+     "r": 23
+    }
+   ],
+   "anchors": {}
+  },
+  "yipeta-negra": {
+   "name": "Yipeta (negra)",
+   "width": 364,
+   "height": 140,
+   "widthM": 4.85,
+   "heightM": 1.87,
+   "ground": 140,
+   "hitbox": {
+    "x": 4,
+    "y": 18,
+    "w": 354,
+    "h": 122
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.72
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 86,
+     "y": 112,
+     "r": 28
+    },
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 288,
+     "y": 112,
+     "r": 28
+    }
+   ],
+   "anchors": {}
+  },
+  "yipeta-blanca": {
+   "name": "Yipeta (blanca)",
+   "width": 364,
+   "height": 140,
+   "widthM": 4.85,
+   "heightM": 1.87,
+   "ground": 140,
+   "hitbox": {
+    "x": 4,
+    "y": 18,
+    "w": 354,
+    "h": 122
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 4.72
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 86,
+     "y": 112,
+     "r": 28
+    },
+    {
+     "sprite": "wheel-alloy-28",
+     "x": 288,
+     "y": 112,
+     "r": 28
+    }
+   ],
+   "anchors": {}
+  },
+  "moto-delivery": {
+   "name": "Motor de delivery",
+   "width": 176,
+   "height": 142,
+   "widthM": 2.35,
+   "heightM": 1.89,
+   "ground": 142,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-spoke-23",
+     "x": 36,
+     "y": 119,
+     "r": 23
+    },
+    {
+     "sprite": "wheel-spoke-23",
+     "x": 142,
+     "y": 119,
+     "r": 23
+    }
+   ],
+   "anchors": {
+    "rider": {
+     "x": 70,
+     "y": 68
+    },
+    "tail": {
+     "x": 8,
+     "y": 80
+    }
+   }
+  },
+  "repartidor": {
+   "name": "Repartidor",
+   "width": 176,
+   "height": 160,
+   "widthM": 2.35,
+   "heightM": 2.13,
+   "ground": 160,
+   "hitbox": {
+    "x": 12,
+    "y": 40,
+    "w": 156,
+    "h": 102
+   },
+   "hitboxM": {
+    "x": 0.16,
+    "w": 2.08
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "camion-agua": {
+   "name": "Camión de botellones",
+   "width": 470,
+   "height": 236,
+   "widthM": 6.27,
+   "heightM": 3.15,
+   "ground": 236,
+   "hitbox": {
+    "x": 4,
+    "y": 62,
+    "w": 462,
+    "h": 174
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 6.16
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-truck-26",
+     "x": 98,
+     "y": 210,
+     "r": 26
+    },
+    {
+     "sprite": "wheel-truck-26",
+     "x": 412,
+     "y": 210,
+     "r": 26
+    }
+   ],
+   "anchors": {}
+  },
+  "camion-basura": {
+   "name": "Camión de la basura",
+   "width": 700,
+   "height": 262,
+   "widthM": 9.33,
+   "heightM": 3.49,
+   "ground": 262,
+   "hitbox": {
+    "x": 4,
+    "y": 36,
+    "w": 692,
+    "h": 226
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 9.23
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-truck-30",
+     "x": 220,
+     "y": 232,
+     "r": 30
+    },
+    {
+     "sprite": "wheel-truck-30",
+     "x": 620,
+     "y": 232,
+     "r": 30
+    }
+   ],
+   "anchors": {}
+  },
+  "camion-mudanza": {
+   "name": "Camión de mudanza",
+   "width": 520,
+   "height": 270,
+   "widthM": 6.93,
+   "heightM": 3.6,
+   "ground": 270,
+   "hitbox": {
+    "x": 4,
+    "y": 40,
+    "w": 508,
+    "h": 230
+   },
+   "hitboxM": {
+    "x": 0.05,
+    "w": 6.77
+   },
+   "wheels": [
+    {
+     "sprite": "wheel-steel-28",
+     "x": 112,
+     "y": 242,
+     "r": 28
+    },
+    {
+     "sprite": "wheel-steel-28",
+     "x": 454,
+     "y": 242,
+     "r": 28
+    }
+   ],
+   "anchors": {}
+  },
+  "wheel-spoke-23": {
+   "name": "Rueda (spoke)",
+   "width": 50,
+   "height": 50,
+   "widthM": 0.67,
+   "heightM": 0.67,
+   "ground": 50,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 50,
+    "h": 50
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.67
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-rusty-22": {
+   "name": "Rueda (rusty)",
+   "width": 48,
+   "height": 48,
+   "widthM": 0.64,
+   "heightM": 0.64,
+   "ground": 48,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 48,
+    "h": 48
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.64
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-hubcap-22": {
+   "name": "Rueda (hubcap)",
+   "width": 48,
+   "height": 48,
+   "widthM": 0.64,
+   "heightM": 0.64,
+   "ground": 48,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 48,
+    "h": 48
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.64
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-alloy-24": {
+   "name": "Rueda (alloy)",
+   "width": 52,
+   "height": 52,
+   "widthM": 0.69,
+   "heightM": 0.69,
+   "ground": 52,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 52,
+    "h": 52
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.69
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-bus-37": {
+   "name": "Rueda (bus)",
+   "width": 78,
+   "height": 78,
+   "widthM": 1.04,
+   "heightM": 1.04,
+   "ground": 78,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 78,
+    "h": 78
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 1.04
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-steel-30": {
+   "name": "Rueda (steel)",
+   "width": 64,
+   "height": 64,
+   "widthM": 0.85,
+   "heightM": 0.85,
+   "ground": 64,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.85
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-steel-22": {
+   "name": "Rueda (steel)",
+   "width": 48,
+   "height": 48,
+   "widthM": 0.64,
+   "heightM": 0.64,
+   "ground": 48,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 48,
+    "h": 48
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.64
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-alloy-28": {
+   "name": "Rueda (alloy)",
+   "width": 60,
+   "height": 60,
+   "widthM": 0.8,
+   "heightM": 0.8,
+   "ground": 60,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 60,
+    "h": 60
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.8
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-alloy-23": {
+   "name": "Rueda (alloy)",
+   "width": 50,
+   "height": 50,
+   "widthM": 0.67,
+   "heightM": 0.67,
+   "ground": 50,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 50,
+    "h": 50
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.67
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-truck-26": {
+   "name": "Rueda (truck)",
+   "width": 56,
+   "height": 56,
+   "widthM": 0.75,
+   "heightM": 0.75,
+   "ground": 56,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 56,
+    "h": 56
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.75
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-truck-30": {
+   "name": "Rueda (truck)",
+   "width": 64,
+   "height": 64,
+   "widthM": 0.85,
+   "heightM": 0.85,
+   "ground": 64,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.85
+   },
+   "wheels": [],
+   "anchors": {}
+  },
+  "wheel-steel-28": {
+   "name": "Rueda (steel)",
+   "width": 60,
+   "height": 60,
+   "widthM": 0.8,
+   "heightM": 0.8,
+   "ground": 60,
+   "hitbox": {
+    "x": 0,
+    "y": 0,
+    "w": 60,
+    "h": 60
+   },
+   "hitboxM": {
+    "x": 0,
+    "w": 0.8
+   },
+   "wheels": [],
+   "anchors": {}
+  }
+ }
+}

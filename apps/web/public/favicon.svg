@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- DominicanGames mark: the World Grid (original artwork) -->
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b98ff"/><stop offset="1" stop-color="#2747e6"/></linearGradient>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6b84"/><stop offset="1" stop-color="#e3173e"/></linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="13.5" height="13.5" rx="3.4" fill="url(#b)"/>
+  <rect x="17" y="1.5" width="13.5" height="13.5" rx="3.4" fill="url(#r)"/>
+  <rect x="1.5" y="17" width="13.5" height="13.5" rx="3.4" fill="url(#r)"/>
+  <path d="M19.2 18.9v10.2c0 .9 1 1.5 1.8 1l8.4-5.1c.7-.5.7-1.6 0-2l-8.4-5.1c-.8-.5-1.8.1-1.8 1Z" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "name": "@sd/world-builder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^4.5.1",
+    "@sd/shared": "0.1.0",
+    "earcut": "^3.2.4",
+    "polygon-clipping": "^0.15.7"
+  }
+}

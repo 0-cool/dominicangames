@@ -1,0 +1,263 @@
+@import 'tailwindcss';
+
+/*
+ * DominicanGames design system
+ * ────────────────────────────
+ *  Brand    deep-navy surfaces (ink-*), DG Red (primary actions) and DG Blue (focus, links, highlights) —
+ *           a nod to the Dominican flag, never a copy of it. Display type: Unbounded (OFL, vendored).
+ *  Games    each title keeps its own identity: Santo Domingo Open World = sunset palette (sun-*) + Anton (.display).
+ *  Type     brand-title (Unbounded) for platform headings · Inter for UI/body · Anton only inside game identity.
+ */
+
+@font-face {
+  font-family: 'Unbounded Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url('./assets/fonts/unbounded/unbounded-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-brand: 'Unbounded Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Anton', Impact, 'Arial Narrow', ui-sans-serif, sans-serif;
+
+  /* Neutrals — navy-tinted night */
+  --color-ink-950: #05070d;
+  --color-ink-900: #090c16;
+  --color-ink-850: #0d1120;
+  --color-ink-800: #121729;
+  --color-ink-750: #171d33;
+  --color-ink-700: #1f2640;
+  --color-ink-600: #2a3352;
+  --color-ink-500: #47516f;
+  --color-ink-400: #7a84a3;
+  --color-ink-300: #a7aec6;
+  --color-ink-200: #cdd2e2;
+  --color-ink-100: #eceef6;
+
+  /* DominicanGames brand */
+  --color-dg-red-300: #ff8a9c;
+  --color-dg-red-400: #ff5470;
+  --color-dg-red-500: #ff2e4d;
+  --color-dg-red-600: #e3173e;
+  --color-dg-red-700: #b80f31;
+  --color-dg-blue-300: #93adff;
+  --color-dg-blue-400: #6b8cff;
+  --color-dg-blue-500: #3d64ff;
+  --color-dg-blue-600: #2747e6;
+  --color-dg-blue-700: #1c34b3;
+
+  /* Santo Domingo Open World identity + status colours */
+  --color-sun-600: #e9532a;
+  --color-sun-500: #ff6a3d;
+  --color-sun-400: #ff8a5c;
+  --color-sun-300: #ffb08e;
+  --color-gold-500: #f5b301;
+  --color-gold-400: #ffc23d;
+  --color-gold-300: #ffd77a;
+  --color-sea-600: #0f8f86;
+  --color-sea-500: #19b3a3;
+  --color-sea-400: #2fd3c0;
+  --color-sea-300: #7de6d9;
+  --color-coral-500: #ff3d6e;
+  --color-leaf-500: #3fbf6a;
+
+  --shadow-glow: 0 0 0 1px rgb(255 255 255 / 0.04), 0 24px 60px -24px rgb(0 0 0 / 0.85);
+  --shadow-red: 0 12px 36px -12px rgb(255 46 77 / 0.65);
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-fade-in: fade-in 0.8s ease-out both;
+  --animate-toast: toast-in 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-pop: pop 0.6s cubic-bezier(0.2, 1.4, 0.3, 1) both;
+  --animate-kenburns: kenburns 14s ease-out both;
+  --animate-tile: tile 1.6s ease-in-out infinite;
+  --animate-shine: shine 2.8s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes toast-in {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes pop {
+    0% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 1; transform: none; }
+  }
+  @keyframes kenburns {
+    from { transform: scale(1.12) translate3d(1.5%, 1%, 0); }
+    to { transform: scale(1.0) translate3d(0, 0, 0); }
+  }
+  @keyframes tile {
+    0%, 100% { opacity: 0.35; transform: scale(0.86); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes shine {
+    0% { transform: translateX(-120%) skewX(-18deg); }
+    60%, 100% { transform: translateX(220%) skewX(-18deg); }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-950 text-ink-100 font-sans;
+    min-height: 100dvh;
+  }
+  ::selection {
+    background: rgb(255 46 77 / 0.35);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-dg-blue-400);
+    outline-offset: 2px;
+  }
+  input[type='range'],
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: var(--color-dg-red-500);
+  }
+}
+
+@layer components {
+  /* ── Typography ── */
+  .brand-title {
+    font-family: var(--font-brand);
+    font-weight: 750;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+  }
+  .brand-eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.28em] text-dg-red-400;
+  }
+  /* Santo Domingo Open World identity (Anton). Also used by the in-game HUD. */
+  .display {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    line-height: 0.92;
+  }
+  .text-gradient-sun {
+    background: linear-gradient(100deg, #ffd77a 0%, #ff8a5c 45%, #ff3d6e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-dg {
+    background: linear-gradient(100deg, #ffffff 0%, #ffd0d8 30%, #ff5470 65%, #ff2e4d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-flag {
+    background: linear-gradient(100deg, #93adff 0%, #ffffff 48%, #ff5470 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ── Surfaces ── */
+  .bg-sun {
+    background: linear-gradient(100deg, #ffb347 0%, #ff6a3d 50%, #ff3d6e 100%);
+  }
+  .bg-dg {
+    background: linear-gradient(135deg, #ff4d68 0%, #ff2e4d 45%, #d4123a 100%);
+  }
+  .bg-dg-flag {
+    background: linear-gradient(110deg, #2747e6 0%, #3d64ff 35%, #ff2e4d 70%, #e3173e 100%);
+  }
+  .card {
+    @apply rounded-2xl border border-white/[0.07] bg-ink-850/80 shadow-glow backdrop-blur;
+  }
+  .glass {
+    @apply border border-white/10 bg-white/[0.06] backdrop-blur-xl;
+  }
+  .hairline {
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.14), transparent);
+    height: 1px;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .dg-grid-bg {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.28), transparent);
+    animation: var(--animate-shine);
+  }
+
+  /* ── Legal pages ── */
+  .prose-legal h2 {
+    @apply mt-10 mb-3 text-xl font-semibold text-ink-100;
+  }
+  .prose-legal h3 {
+    @apply mt-6 mb-2 font-semibold text-ink-100;
+  }
+  .prose-legal p,
+  .prose-legal li {
+    @apply leading-relaxed text-ink-300;
+  }
+  .prose-legal p {
+    @apply mb-3;
+  }
+  .prose-legal ul {
+    @apply mb-4 list-disc space-y-1 pl-6;
+  }
+  .prose-legal a {
+    @apply text-dg-blue-300 underline underline-offset-2;
+  }
+
+  /* ── In-game ── */
+  .hud-text {
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.9), 0 0 12px rgb(0 0 0 / 0.5);
+  }
+  .kbd {
+    @apply inline-flex min-w-7 items-center justify-center rounded-md border border-white/15 border-b-2 bg-white/10 px-1.5 py-0.5 font-mono text-xs font-semibold text-white;
+  }
+}
+
+/* Thin, unobtrusive scrollbars in panels */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 0.15) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

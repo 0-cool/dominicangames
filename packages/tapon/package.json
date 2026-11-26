@@ -1,0 +1,21 @@
+{
+  "name": "@sd/tapon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "El Tapón — side-view 2D arcade game (Canvas 2D) for DominicanGames",
+  "exports": {
+    ".": "./src/index.ts",
+    "./art": "./src/art/index.ts",
+    "./sim": "./src/sim/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@sd/game": "0.1.0",
+    "@sd/shared": "0.1.0"
+  },
+  "sideEffects": false
+}
